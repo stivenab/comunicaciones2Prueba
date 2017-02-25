@@ -9,6 +9,8 @@ Ball.Preloader.prototype = {
 		this.load.image('hole', 'img/hole.png');
 		this.load.image('element-w', 'img/element-w.png');
 		this.load.image('element-h', 'img/element-h.png');
+		this.load.image('element-b', 'img/element-b.png');
+		this.load.image('element-a', 'img/element-a.png');
 		this.load.image('panel', 'img/panel.png');
 		this.load.image('title', 'img/title.png');
 		this.load.image('button-pause', 'img/button-pause.png');
