@@ -2,8 +2,8 @@ Ball.Game = function(game) {};
 Ball.Game.prototype = {
 	create: function() {
 		this.add.sprite(0, 0, 'screen-bg');
-		this.add.sprite(0, 0, 'panel');
-		// this.physics.startSystem(Phaser.Physics.ARCADE);
+		//this.add.sprite(0, 0, 'panel');
+		this.physics.startSystem(Phaser.Physics.ARCADE);
 		this.fontSmall = { font: "16px Arial", fill: "#e4beef" };
 		this.fontBig = { font: "24px Arial", fill: "#e4beef" };
 		this.fontMessage = { font: "24px Arial", fill: "#e4beef",  align: "center", stroke: "#320C3E", strokeThickness: 4 };
@@ -79,13 +79,15 @@ Ball.Game.prototype = {
 				{ x: 370, y: 200, t: 'a'},
 				{ x: 370, y: 250, t: 'a'},
 				{ x: 370, y: 300, t: 'a'},
+				{ x: 370, y: 150, t: 'l1'},
+				{ x: 370, y: 350, t: 'l2'},
 				{ x: 320, y: 350, t: 'a'}, //Hasta acá va la D
-				{ x: 420, y: 150, t: 'w'},
+				{ x: 430, y: 150, t: 'w'},
 				{ x: 480, y: 150, t: 'w'},
-				{ x: 420, y: 200, t: 'w'},
-				{ x: 420, y: 250, t: 'w'},
-				{ x: 420, y: 300, t: 'w'},
-				{ x: 420, y: 350, t: 'w'},
+				{ x: 430, y: 200, t: 'w'},
+				{ x: 430, y: 250, t: 'w'},
+				{ x: 430, y: 300, t: 'w'},
+				{ x: 430, y: 350, t: 'w'},
 				{ x: 480, y: 250, t: 'w'},
 				{ x: 480, y: 350, t: 'w'}, // Hasta acá va la E
 				{ x: 600, y: 150, t: 'a'},
@@ -100,7 +102,73 @@ Ball.Game.prototype = {
 				{ x: 700, y: 250, t: 'a'},
 				{ x: 700, y: 300, t: 'a'},
 				{ x: 700, y: 350, t: 'a'}, // Hasta acá va la A
-				{ x: 700, y: 500, t: 'b'}
+				{ x: 100, y: 500, t: 'b'},
+				{ x: 100, y: 525, t: 'b'},
+				{ x: 200, y: 500, t: 'b'},
+				{ x: 200, y: 525, t: 'b'},
+				{ x: 300, y: 500, t: 'b'},
+				{ x: 300, y: 525, t: 'b'},
+				{ x: 400, y: 500, t: 'b'},
+				{ x: 400, y: 525, t: 'b'},
+				{ x: 500, y: 500, t: 'b'},
+				{ x: 500, y: 525, t: 'b'},
+				{ x: 600, y: 500, t: 'b'},
+				{ x: 600, y: 525, t: 'b'},
+				{ x: 700, y: 500, t: 'b'},
+				{ x: 700, y: 525, t: 'b'},
+				{ x: 800, y: 500, t: 'b'},
+				{ x:800 , y: 525, t: 'b'},
+				{ x: 50, y: 430, t: 'b'},
+				{ x: 50, y: 455, t: 'b'},
+				{ x: 150, y: 430, t: 'b'},
+				{ x: 150, y: 455, t: 'b'},
+				{ x: 250, y: 430, t: 'b'},
+				{ x: 250, y: 455, t: 'b'},
+				{ x: 350, y: 430, t: 'b'},
+				{ x: 350, y: 455, t: 'b'},
+				{ x: 450, y: 430, t: 'b'},
+				{ x: 450, y: 455, t: 'b'},
+				{ x: 550, y: 430, t: 'b'},
+				{ x: 550, y: 455, t: 'b'},
+				{ x: 650, y: 430, t: 'b'},
+				{ x: 650, y: 455, t: 'b'},
+				{ x: 750, y: 430, t: 'b'},
+				{ x: 750, y: 455, t: 'b'}, //hasta acá van las barricadas de abajo
+				{ x: 100, y: 75, t: 'b'},
+				{ x: 100, y: 100, t: 'b'},
+				{ x: 200, y: 75, t: 'b'},
+				{ x: 200, y: 100, t: 'b'},
+				{ x: 300, y: 75, t: 'b'},
+				{ x: 300, y: 100, t: 'b'},
+				{ x: 400, y: 75, t: 'b'},
+				{ x: 400, y: 100, t: 'b'},
+				{ x: 500, y: 75, t: 'b'},
+				{ x: 500, y: 100, t: 'b'},
+				{ x: 600, y: 75, t: 'b'},
+				{ x: 600, y: 100, t: 'b'},
+				{ x: 700, y: 75, t: 'b'},
+				{ x: 700, y: 100, t: 'b'},
+				{ x: 800, y: 75, t: 'b'},
+				{ x:800 , y: 100, t: 'b'},
+				{ x: 50, y: 25, t: 'b'},
+				{ x: 50, y: 50, t: 'b'},
+				{ x: 150, y: 25, t: 'b'},
+				{ x: 150, y: 50, t: 'b'},
+				{ x: 250, y: 25, t: 'b'},
+				{ x: 250, y: 50, t: 'b'},
+				{ x: 350, y: 25, t: 'b'},
+				{ x: 350, y: 50, t: 'b'},
+				{ x: 450, y: 25, t: 'b'},
+				{ x: 450, y: 50, t: 'b'},
+				{ x: 550, y: 25, t: 'b'},
+				{ x: 550, y: 50, t: 'b'},
+				{ x: 650, y: 25, t: 'b'},
+				{ x: 650, y: 50, t: 'b'},
+				{ x: 750, y: 25, t: 'b'},
+				{ x: 750, y: 50, t: 'b'},
+
+
+
 
 
 
