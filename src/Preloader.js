@@ -16,17 +16,20 @@ Ball.Preloader.prototype = {
 		this.load.image('panel', 'img/panel.png');
 		this.load.image('title', 'img/title.png');
 		this.load.image('button-pause', 'img/button-pause.png');
+		this.load.image('go', 'img/go.png');
 		this.load.image('screen-bg', 'img/screen-bg.jpg');
 		this.load.image('screen-mainmenu', 'img/screen-mainmenu.png');
-		this.load.image('screen-howtoplay', 'img/screen-howtoplay.jpg');
+		this.load.spritesheet('screen-howtoplay', 'img/screen-howtoplay.png', 799, 599, 10);
 		this.load.image('border-horizontal', 'img/border-horizontal.png');
 		this.load.image('border-vertical', 'img/border-vertical.png');
 		this.load.spritesheet('button-audio', 'img/button-audio.png', 35, 35);
 		this.load.spritesheet('button-start', 'img/button-start.png', 146, 51);
 
+
 		this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
 	},
 	create: function() {
 		this.game.state.start('MainMenu');
+
 	}
 };
